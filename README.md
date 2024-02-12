@@ -28,8 +28,9 @@ git log --oneline
 ```
 
 3. something like `npm run dev`
+```bat
 ./mvnw spring-boot:run
-
+```
 
 
 
@@ -55,7 +56,7 @@ npm version 0.1.7
 git init
 git add .
 git commit -am "[0.0.0] "
-git remote add origin https://github.com/ThisoeCode/springboot-tut_following-devtiro.git
+git remote add origin <https://github.com/ThisoeCode/REPO.git>
 git push -u origin main
 ```
 
