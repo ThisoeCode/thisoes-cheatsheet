@@ -50,7 +50,7 @@ npm version 0.1.7
 
 
 
-# git
+# Git
 1. Initialize / Create a repo
 ```bat
 git init
@@ -83,30 +83,30 @@ git checkout app-router
 git commit --amend -m "New message"
 ```
 
-7. List all branch names / List all remote names
+6. List all branch names / List all remote names
 ```bat
 git branch -a
 git remote
 ```
 
-8. Delete branch
+7. Delete branch
 ```bat
 git branch -d <branch-name>
 git push origin --delete <branch-name>
 ```
 
-10. Find (and switch to) which branch a commit is on using its hash
+8. Find (and switch to) which branch a commit is on using its hash
 ```bat
 git branch --contains <commit-hash>
 ```
 
-11. Force push & push all
+9. Force push & push all
 ```bat
 git push --force origin <branch-name>
 git push --all
 ```
 
-14. Commit current status in a new branch `temp` and recover `main` branch
+10. Commit current status in a new branch `temp` and recover `main` branch
 ```bat
 git checkout -b temp
 git add .
@@ -116,21 +116,28 @@ git reset --hard HEAD
 :: git push origin temp
 ```
 
-15. Go back to previous commit
+11. Go back to previous commit
 ```bat
 git reset <hash> --hard
 git reset bc5ca7 --hard
 ```
 
-16. Move `file.txt` from sub-branch to `main` branch (CAUTION: overwrite)
+12. Move `file.txt` from sub-branch to `main` branch (CAUTION: overwrite)
 ```bat
 git checkout <branch-name> -- <file.txt>
 ```
 
+13. After changing the repo name on GitHub, change local Git repo's remote URL
+  1. check the current remote URL
+```bat
+git remote -v
+```
+  2. change URL
+```bat
+git remote set-url origin <https://github.com/ThisoeCode/NEW-REMOTE-URL.git>
+```
 
-
-
-
+14. ...
 
 
 
