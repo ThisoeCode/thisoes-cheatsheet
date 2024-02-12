@@ -12,10 +12,34 @@ git log --oneline
 
 
 
+# Maven
+1. clean hook
+```bat
+./mvnw clean
+./mvnw clean <default-phases>
+```
+
+2. default ()
+```bat
+./mvnw compile
+./mvnw clean test
+./mvnw clean package
+./mvnw clean verify
+```
+
+3. something like `npm run dev`
+./mvnw spring-boot:run
+
+
+
+
 # npm
 1. NextJS run dev on http://localhost:3000
 ```bat
 npm run dev
+
+npm run build
+npm run start
 ```
 
 2. Modify version **after committed**
@@ -101,15 +125,6 @@ git reset bc5ca7 --hard
 ```bat
 git checkout <branch-name> -- <file.txt>
 ```
-
-
-
-
-
-
-
-
-
 
 
 
