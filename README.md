@@ -19,7 +19,7 @@ git log --oneline
 ./mvnw clean <default-phases>
 ```
 
-2. default ()
+2. [default]
 ```bat
 ./mvnw compile
 ./mvnw clean test
@@ -27,7 +27,7 @@ git log --oneline
 ./mvnw clean verify
 ```
 
-3. something like `npm run dev`
+3. something like `npm run dev` on `localhost8080`
 ```bat
 ./mvnw spring-boot:run
 ```
@@ -35,7 +35,7 @@ git log --oneline
 
 
 # npm
-1. NextJS run dev on http://localhost:3000
+1. NextJS preview & test on `localhost:3000`
 ```bat
 npm run dev
 
@@ -43,7 +43,7 @@ npm run build
 npm run start
 ```
 
-2. Modify version **after committed**
+2. Modify version **_after committed_**
 ```bat
 npm version 0.1.7
 ```
