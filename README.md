@@ -35,6 +35,12 @@ git log --oneline
 
 
 # npm
+### Create new NextJS proj
+```bat
+:: At the directory where the proj root folder going to be
+npx create-next-app@latest
+```
+
 ### NextJS preview & test on `localhost:3000`
 ```bat
 npm run dev
