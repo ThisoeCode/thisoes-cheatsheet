@@ -136,20 +136,50 @@ git checkout <branch-name> -- <file.txt>
 ### After changing the repo name on GitHub, change local Git repo's remote URL
 
   1. check the current remote URL
-```bat
-git remote -v
-```
+  ```bat
+  git remote -v
+  ```
 
   2. change URL
-```bat
-git remote set-url origin <https://github.com/ThisoeCode/NEW-REMOTE-URL.git>
-```
+  ```bat
+  git remote set-url origin <https://github.com/ThisoeCode/NEW-REMOTE-URL.git>
+  ```
 
 ### ...
 
 
 
+# Linux Bash ([GoDaddy](https://godaddy.com/) cPanel SSH)
 
+### Install Node
 
+  1. Download (Please change the version to needed one)
+  ```bash
+  wget https://nodejs.org/dist/v20.11.1/node-v20.11.1-linux-x64.tar.gz
+  tar xvzf node-v20.11.1-linux-x64.tar.gz
+  mv node-v20.11.1-linux-x64 nodejs
+  ```
+  2. Move bin file
+  ```bash
+  mkdir ~/bin
+  cp nodejs/bin/node ~/bin
+  ```
+  3. Link
+  ```bash
+  cd ~/bin
+  ln -s ../nodejs/lib/node_modules/npm/bin/npm-cli.js npm
+  ```
+  4. Test command
+  ```bash
+  node --version
+  ```
+
+### Enable `npm`
+```bash
+cd ~/bin
+ln -s ../nodejs/bin/npm npm
+
+npm --version
+```
 
 
