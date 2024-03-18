@@ -56,6 +56,19 @@ npm version 0.1.7
 
 
 
+# Composer
+### Add a package
+```bat
+composer require vlucas/phpdotenv
+```
+
+### Install all packages after pulling
+```bat
+composer install
+```
+
+
+
 # Git
 ### Initialize / Create a repo
 ```bat
@@ -149,7 +162,7 @@ git checkout <branch-name> -- <file.txt>
 
 
 
-# Linux Bash ([GoDaddy](https://godaddy.com/) cPanel SSH)
+# Linux Bash (cPanel SSH)
 
 ### Install Node
 
