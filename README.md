@@ -164,6 +164,15 @@ git checkout <branch-name> -- <file.txt>
 
 # Linux Bash (cPanel SSH)
 
+### Install Composer
+```bash
+wget https://getcomposer.org/installer
+php installer
+
+composer --version
+```
+(Composer commands see [#Composer](#composer))
+
 ### Install Node
 
   1. Download (Please change the version to needed one)
@@ -186,13 +195,12 @@ git checkout <branch-name> -- <file.txt>
   ```bash
   node --version
   ```
-
-### Enable `npm`
-```bash
-cd ~/bin
-ln -s ../nodejs/bin/npm npm
-
-npm --version
-```
+  5. Enable `npm`
+  ```bash
+  cd ~/bin
+  ln -s ../nodejs/bin/npm npm
+  
+  npm --version
+  ```
 
 
