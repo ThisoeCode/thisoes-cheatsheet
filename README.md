@@ -67,6 +67,16 @@ composer require vlucas/phpdotenv
 composer install
 ```
 
+### Show installed packages
+```bat
+composer show -i
+```
+
+### Uninstall a package
+```bat
+composer remove vlucas/phpdotenv
+```
+
 
 
 # Git
@@ -174,7 +184,6 @@ composer --version
 (Composer commands see [#Composer](#composer))
 
 ### Install Node
-
   1. Download (Please change the version to needed one)
   ```bash
   wget https://nodejs.org/dist/v20.11.1/node-v20.11.1-linux-x64.tar.gz
