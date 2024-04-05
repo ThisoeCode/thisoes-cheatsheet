@@ -168,6 +168,14 @@ git checkout <branch-name> -- <file.txt>
   git remote set-url origin <https://github.com/ThisoeCode/NEW-REMOTE-URL.git>
   ```
 
+### Revert (as a new commit)
+```bat
+git log --oneline
+
+git revert --no-commit a1b2c3d..HEAD
+git commit -m ""
+```
+
 ### ...
 
 
