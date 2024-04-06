@@ -91,10 +91,17 @@ git push -u origin main
 git checkout -b new_branch_name commit_hash
 ```
 
-### Create empty orphan branch
+### Create an empty orphan branch
+(Old way)
 ```bat
 git checkout --orphan new_branch_name
 git rm -rf .
+```
+([New way](https://stackoverflow.com/a/34100189/23120980))
+```bat
+git switch --orphan <branchname>
+git commit --allow-empty -m "Initial commit on orphan branch"
+git push -u origin <branchname>
 ```
 
 ### Merge from <branch-name> to "main" branch
