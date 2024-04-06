@@ -1,13 +1,10 @@
 # [PINNED]
 ```bat
-git commit -am "[0.1.8.16] "
-
-git checkout app-route
-git reset --hard main
-git commit --amend -m "0.2.1"
-git push origin app-route --force
+git commit -am "[0.1.1] "
 
 git log --oneline
+
+
 ```
 
 
@@ -27,7 +24,7 @@ git log --oneline
 ./mvnw clean verify
 ```
 
-### something like `npm run dev` on `localhost8080`
+### something like `npm run dev` on `localhost:8080`
 ```bat
 ./mvnw spring-boot:run
 ```
@@ -37,7 +34,7 @@ git log --oneline
 # npm
 ### Create new NextJS proj
 ```bat
-:: At the directory where the proj root folder going to be
+:: `cd` to the directory where the proj root folder is gonna be
 npx create-next-app@latest
 ```
 
@@ -146,6 +143,7 @@ git reset --hard HEAD
 ```
 
 ### Go back to previous commit
+See a [safer way](#revert-as-a-new-commit)
 ```bat
 git reset <hash> --hard
 git reset bc5ca7 --hard
