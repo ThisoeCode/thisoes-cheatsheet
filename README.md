@@ -34,7 +34,7 @@ git log --oneline
 # npm
 ### Create new NextJS proj
 ```bat
-:: `cd` to the directory where the proj root folder is gonna be
+:: `cd` to the directory where the proj root folder gonna stay in
 npx create-next-app@latest
 ```
 
@@ -133,9 +133,15 @@ git push origin --delete <branch-name>
 git branch --contains <commit-hash>
 ```
 
-### Force push & push all
+### Force push
 ```bat
 git push --force origin <branch-name>
+```
+
+### See status of all branches & Push all
+```bat
+git branch -vv
+git status -sb
 git push --all
 ```
 
