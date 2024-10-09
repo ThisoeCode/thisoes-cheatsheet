@@ -6,29 +6,7 @@ git log --oneline
 
 
 ```
-
-
-
-# Maven
-### clean hook
-```bat
-./mvnw clean
-./mvnw clean <default-phases>
-```
-
-### [default]
-```bat
-./mvnw compile
-./mvnw clean test
-./mvnw clean package
-./mvnw clean verify
-```
-
-### something like `npm run dev` on `localhost:8080`
-```bat
-./mvnw spring-boot:run
-```
-
+[jQuery code](https://code.jquery.com/jquery-latest.min.js)
 
 
 # npm
@@ -49,29 +27,6 @@ npm run start
 ### Modify version **_after committed_**
 ```bat
 npm version 0.1.7
-```
-
-
-
-# Composer
-### Add a package
-```bat
-composer require vlucas/phpdotenv
-```
-
-### Install all packages after pulling
-```bat
-composer install
-```
-
-### Show installed packages
-```bat
-composer show -i
-```
-
-### Uninstall a package
-```bat
-composer remove vlucas/phpdotenv
 ```
 
 
@@ -191,7 +146,7 @@ git commit -m ""
 
 
 
-# Linux Bash (cPanel SSH)
+# Linux Bash (SSH)
 
 ### Install Composer
 ```bash
@@ -231,4 +186,48 @@ composer --version
   npm --version
   ```
 
+
+
+# Maven
+### clean hook
+```bat
+./mvnw clean
+./mvnw clean <default-phases>
+```
+
+### [default]
+```bat
+./mvnw compile
+./mvnw clean test
+./mvnw clean package
+./mvnw clean verify
+```
+
+### something like `npm run dev` on `localhost:8080`
+```bat
+./mvnw spring-boot:run
+```
+
+
+
+# Composer
+### Add a package
+```bat
+composer require vlucas/phpdotenv
+```
+
+### Install all packages after pulling
+```bat
+composer install
+```
+
+### Show installed packages
+```bat
+composer show -i
+```
+
+### Uninstall a package
+```bat
+composer remove vlucas/phpdotenv
+```
 
