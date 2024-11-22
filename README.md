@@ -142,6 +142,12 @@ git revert --no-commit a1b2c3d..HEAD
 git commit -m ""
 ```
 
+### Unstage: Remove staged file / entire folder
+```bat
+git rm --cached <file_name>
+git rm -r --cached <folder_name>
+```
+
 ### ...
 
 
