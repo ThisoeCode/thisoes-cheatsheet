@@ -1,3 +1,8 @@
+> ## Menu
+> [npm and nextjs](#npm)
+
+
+
 # [PINNED]
 ```bat
 git commit -am "[0.1.1] "
@@ -6,28 +11,10 @@ git log --oneline
 
 
 ```
-[jQuery code](https://code.jquery.com/jquery-latest.min.js)
 
 
-# npm
-### Create new NextJS proj
-```bat
-:: `cd` to the directory where the proj root folder gonna stay in
-npx create-next-app@latest
-```
 
-### NextJS preview & test on `localhost:3000`
-```bat
-npm run dev
-
-npm run build
-npm run start
-```
-
-### Modify version **_after committed_**
-```bat
-npm version 0.1.7
-```
+*******
 
 
 
@@ -150,90 +137,4 @@ git rm -r --cached <folder_name>
 
 ### ...
 
-
-
-# Linux Bash (SSH)
-
-### Install Composer
-```bash
-wget https://getcomposer.org/installer
-php installer
-
-composer --version
-```
-(Composer commands see [#Composer](#composer))
-
-### Install Node
-  1. Download (Please change the version to needed one)
-  ```bash
-  wget https://nodejs.org/dist/v20.11.1/node-v20.11.1-linux-x64.tar.gz
-  tar xvzf node-v20.11.1-linux-x64.tar.gz
-  mv node-v20.11.1-linux-x64 nodejs
-  ```
-  2. Move bin file
-  ```bash
-  mkdir ~/bin
-  cp nodejs/bin/node ~/bin
-  ```
-  3. Link
-  ```bash
-  cd ~/bin
-  ln -s ../nodejs/lib/node_modules/npm/bin/npm-cli.js npm
-  ```
-  4. Test command
-  ```bash
-  node --version
-  ```
-  5. Enable `npm`
-  ```bash
-  cd ~/bin
-  ln -s ../nodejs/bin/npm npm
-  
-  npm --version
-  ```
-
-
-
-# Maven
-### clean hook
-```bat
-./mvnw clean
-./mvnw clean <default-phases>
-```
-
-### [default]
-```bat
-./mvnw compile
-./mvnw clean test
-./mvnw clean package
-./mvnw clean verify
-```
-
-### something like `npm run dev` on `localhost:8080`
-```bat
-./mvnw spring-boot:run
-```
-
-
-
-# Composer
-### Add a package
-```bat
-composer require vlucas/phpdotenv
-```
-
-### Install all packages after pulling
-```bat
-composer install
-```
-
-### Show installed packages
-```bat
-composer show -i
-```
-
-### Uninstall a package
-```bat
-composer remove vlucas/phpdotenv
-```
 
