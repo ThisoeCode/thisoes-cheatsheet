@@ -1,26 +1,26 @@
-> ## Menu
->
-> [jQuery](#jquery)
->
-> [npm and nextjs](#npm)
->
-> [Maven (Java)](#maven)
->
-> [Composer (PHP)](#composer)
->
+## Menu
+
+- [jQuery](#jquery)
+- [npm and nextjs](#npm)
+- [bun and hono](#bun)-
+- \[TODO\] wrangler & CloudFlare Worker
+- [Maven (Java)](#maven)
+- [Composer (PHP)](#composer)
+
+*******
 
 
 
 # jQuery
 [jQuery code RAW (min)](https://code.jquery.com/jquery-latest.min.js)
 
-## CDNs
+### CDNs
 ```html
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 ```
 
-## cheatsheet
+### cheatsheet
 ```js
 // document ready
 $(_=>{
@@ -65,6 +65,63 @@ npm run start
 ### Modify version **_after committed_**
 ```bat
 npm version 0.1.7
+```
+
+
+
+*******
+
+
+
+# Bun
+
+### Create new Hono-Bun proj
+
+1. Init bun proj dir
+```bat
+bun init <THE_APP_NAME>
+```
+
+2. Make `bun start` and `bun dev`
+
+Before `"devDependencies"` add:
+```json
+
+  "scripts": {
+    "start": "bun index.ts",
+    "dev": "bun --watch index.ts"
+  },
+
+```
+
+3. Use Hono
+
+```bat
+bun i hono
+```
+
+```ts
+// create file "hono.ts"
+import { Hono } from 'hono'
+import { logger } from 'hono/logger'
+
+const app = new Hono()
+app
+  .use('*',logger())
+  .get('/', c=>c.text('Hono!'))
+
+export default app
+```
+
+```ts
+// index.ts
+import app from "./hono"
+
+Bun.serve({
+  fetch:app.fetch
+})
+
+console.log("Server is running.")
 ```
 
 

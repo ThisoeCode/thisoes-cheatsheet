@@ -1,38 +1,33 @@
-> ## Menu
->
-> [for C](#linux-for-c-ubuntu)
->
-> [for SSH](#web-dev-ssh)
+## Menu
+- [for C](#ubuntu)
+- [for SSH](#web-dev-ssh)
+
+*******
 
 
-# Linux for C (Ubuntu)
+
+# Ubuntu
 
 - <cite>This part is note written while watching [OJ Tube C Tuturial](https://www.youtube.com/playlist?list=PLz--ENLG_8TMdMJIwyqDIpcEOysvNoonf [C언어 강의]개발자의 로망 - 리눅스 기반 C언어).</cite>
 
 ### Basics
 
 ```bash
-# login root
-su -
+# help
+man ls
 
-sudo
-cd ~
-ls
+# return file content
+cat file.txt
 
 # list out details
 ls -l
 
+# create new dir
 mkdir acme
-# force remove everything under the dir
-rm -rf acme
 
-# Ubuntu: install from app store
+# Ubuntu app store
 apt-get update
-apt-get install vim
 apt-get install gcc
-
-# Vim: create/edit
-vi helloworld.c
 
 # show the ASCII hex code of a file
 xxd helloworld.c
@@ -40,10 +35,11 @@ xxd helloworld.c
 ```
 
 ### Vim
-Command mode: `ESC` -> `Shift`+`:`
+Command mode: `ESC` -> `:`
 `:w` Save
 `:q` Quit
-`:q!` Force quit (without saving)
+`:q!` Quit without saving
+`:wq` Save then Quit
 
 
 

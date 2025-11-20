@@ -1,25 +1,15 @@
-> ## Menu
-> [npm and nextjs](#npm)
+# Git
+*******
 
-
-
-# [PINNED]
+## [PINNED]
 ```bat
 git commit -am "[0.1.1] "
 
 git log --oneline
 
-
 ```
 
-
-
-*******
-
-
-
-# Git
-### Initialize / Create a repo
+## Initialize / Create a repo
 ```bat
 git init
 git add .
@@ -27,6 +17,12 @@ git commit -am "[0.0.0] "
 git remote add origin <https://github.com/ThisoeCode/REPO.git>
 git push -u origin main
 ```
+
+
+
+*******
+
+
 
 ### Use previous commit to create branch
 ```bat
