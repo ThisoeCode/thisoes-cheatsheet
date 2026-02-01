@@ -13,8 +13,13 @@ git log --oneline
 ```bat
 git init
 git add .
-git commit -am "[0.0.0] "
+git commit -am "init"
+
 git remote add origin <https://github.com/ThisoeCode/REPO.git>
+
+:: if LICENSE or README was added on GitHub repo creation
+git pull origin main --allow-unrelated-histories
+
 git push -u origin main
 ```
 
