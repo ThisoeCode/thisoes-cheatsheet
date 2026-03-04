@@ -160,7 +160,7 @@ console.log("Server is running.")
 # LAMP
 ### Thisoe's go-to root `.htaccess` settings
 ```apache
-### Thisoe codes ###
+### BEGIN - Thisoe codes ###
 
 Options +FollowSymLinks
 RewriteEngine On
@@ -187,9 +187,12 @@ RewriteRule ^(.*)/$ %{REQUEST_URI}index.php [L]
 RewriteCond %{REQUEST_URI} ^(.*)/$
 RewriteCond %{DOCUMENT_ROOT}%1/index.html -f
 RewriteRule ^(.*)/$ %{REQUEST_URI}index.html [L]
+
+### END - Thisoe codes ###
 ```
 
-### In case shared hosting do not spit `error_log` files for PHP errors
+### In case a shared hosting won't spit `error_log` files for PHP errors
+In needed PHP files:
 ```php
 ini_set('log_errors', 1);
 ini_set('error_log', __DIR__ . '/php-error.log');
