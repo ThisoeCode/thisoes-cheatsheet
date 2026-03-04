@@ -2,9 +2,10 @@
 
 - [jQuery](#jquery)
 - [npm and nextjs](#npm)
-- [bun and hono](#bun)-
+- [bun and hono](#bun)
 - \[TODO\] wrangler & CloudFlare Worker
 - [Maven (Java)](#maven)
+- [LAMP / cPanel related](#lamp)
 - [Composer (PHP)](#composer)
 
 *******
@@ -148,6 +149,50 @@ console.log("Server is running.")
 ### something like `npm run dev` on `localhost:8080`
 ```bat
 ./mvnw spring-boot:run
+```
+
+
+
+*******
+
+
+
+# LAMP
+### Thisoe's go-to root `.htaccess` settings
+```apache
+### Thisoe codes ###
+
+Options +FollowSymLinks
+RewriteEngine On
+
+# Remove .php extension
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^\.]+)/?$ $1.php [NC,L]
+
+# Remove .html extension
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^\.]+)/?$ $1.html [NC,L]
+
+# If the request is for a directory
+RewriteCond %{REQUEST_FILENAME} -d
+
+# If index.php exists in the directory, serve it
+RewriteCond %{REQUEST_URI} ^(.*)/$
+RewriteCond %{DOCUMENT_ROOT}%1/index.php -f
+RewriteRule ^(.*)/$ %{REQUEST_URI}index.php [L]
+
+# If index.html exists in the directory, serve it
+RewriteCond %{REQUEST_URI} ^(.*)/$
+RewriteCond %{DOCUMENT_ROOT}%1/index.html -f
+RewriteRule ^(.*)/$ %{REQUEST_URI}index.html [L]
+```
+
+### In case shared hosting do not spit `error_log` files for PHP errors
+```php
+ini_set('log_errors', 1);
+ini_set('error_log', __DIR__ . '/php-error.log');
 ```
 
 
