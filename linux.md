@@ -8,7 +8,7 @@
 
 # Ubuntu
 
-- <cite>This part is note written while watching [OJ Tube C Tuturial](https://www.youtube.com/playlist?list=PLz--ENLG_8TMdMJIwyqDIpcEOysvNoonf [C언어 강의]개발자의 로망 - 리눅스 기반 C언어).</cite>
+> This part is note written while watching [OJ Tube C Tuturial](https://www.youtube.com/playlist?list=PLz--ENLG_8TMdMJIwyqDIpcEOysvNoonf [C언어 강의]개발자의 로망 - 리눅스 기반 C언어).
 
 ### Basics
 
@@ -36,10 +36,10 @@ xxd helloworld.c
 
 ### Vim
 Command mode: `ESC` -> `:`
-`:w` Save
-`:q` Quit
-`:q!` Quit without saving
-`:wq` Save then Quit
+- `:w` Save
+- `:q` Quit
+- `:q!` Quit without saving
+- `:wq` Save then Quit
 
 
 

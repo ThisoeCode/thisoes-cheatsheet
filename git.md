@@ -47,7 +47,19 @@ git commit --allow-empty -m "Initial commit on orphan branch"
 git push -u origin <branchname>
 ```
 
-### Merge from <branch-name> to "main" branch
+### Multi-party work merge request acceptance via `pull` (from GitHub tips)
+```bat
+:: 1. Clone the repository or update your local repository with the latest changes.
+git pull origin main
+:: 2. Switch to the base branch of the pull request.
+git checkout main
+:: 3. Merge the head branch into the base branch.
+git merge origin/<user>/<branch>
+:: 4. Push the changes.
+git push -u origin main
+```
+
+### Merge from \<branch-name\> to "main" branch
 ```bat
 git checkout main
 git merge <branch-name>
