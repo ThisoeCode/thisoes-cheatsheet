@@ -68,6 +68,35 @@ npm run start
 npm version 0.1.7
 ```
 
+## `npm init`
+E.g.
+```bat
+npm init
+:: package name: (@thisoe/acc_exe) @thisoe/acme.subtool
+:: version: (1.0.0) 0.1.0
+:: description: the sub-tool of acme project
+:: entry point: (index.js) main.js
+:: test command: 
+:: git repository: https://github.com/ThisoeCode/acme.git
+:: keywords: example, javascript
+:: author: Thisoe
+:: license: (ISC) MIT
+:: type: (commonjs) module
+```
+
+### Update version of your package
+Workflow: Keep Git working dir clean
+```bat
+git commit -am "hotfix"
+npm version patch   :: 0.1.0 -> 0.1.1
+npm version minor   :: 0.1.0 -> 0.2.0
+npm version major   :: 0.1.0 -> 1.0.0
+```
+This automatically:
+- updates `package.json` and `package-lock.json`
+- creates a git commit
+- creates a git tag
+
 
 
 *******
