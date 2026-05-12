@@ -3,7 +3,7 @@
 - [jQuery](#jquery)
 - [npm and nextjs](#npm)
 - [bun and hono](#bun)
-- \[TODO\] wrangler & CloudFlare Worker
+- TODO: wrangler & CloudFlare Worker
 - [Maven (Java)](#maven)
 - [LAMP / cPanel related](#lamp)
 - [Composer (PHP)](#composer)
@@ -63,12 +63,10 @@ npm run build
 npm run start
 ```
 
-### Modify version **_after committed_**
-```bat
-npm version 0.1.7
-```
 
-## `npm init`
+## npm Package Management
+
+### `npm init`
 E.g.
 ```bat
 npm init
@@ -91,6 +89,7 @@ git commit -am "hotfix"
 npm version patch   :: 0.1.0 -> 0.1.1
 npm version minor   :: 0.1.0 -> 0.2.0
 npm version major   :: 0.1.0 -> 1.0.0
+npm version 0.1.7
 ```
 This automatically:
 - updates `package.json` and `package-lock.json`

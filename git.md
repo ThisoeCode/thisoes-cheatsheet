@@ -15,7 +15,7 @@ git init
 git add .
 git commit -am "init"
 
-git remote add origin <https://github.com/ThisoeCode/REPO.git>
+git remote add origin <https://github.com/ThisoeCode/acme.git>
 
 :: if LICENSE or README was added on GitHub repo creation
 git pull origin main --allow-unrelated-histories
@@ -45,18 +45,6 @@ git rm -rf .
 git switch --orphan <branchname>
 git commit --allow-empty -m "Initial commit on orphan branch"
 git push -u origin <branchname>
-```
-
-### Multi-party work merge request acceptance via `pull` (from GitHub tips)
-```bat
-:: 1. Clone the repository or update your local repository with the latest changes.
-git pull origin main
-:: 2. Switch to the base branch of the pull request.
-git checkout main
-:: 3. Merge the head branch into the base branch.
-git merge origin/<user>/<branch>
-:: 4. Push the changes.
-git push -u origin main
 ```
 
 ### Merge from \<branch-name\> to "main" branch
@@ -142,12 +130,42 @@ git revert --no-commit a1b2c3d..HEAD
 git commit -m ""
 ```
 
-### Unstage: Remove staged file / entire folder
+### Unstage: Remove (untrack) staged file / dir
 ```bat
 git rm --cached <file_name>
 git rm -r --cached <folder_name>
 ```
 
-### ...
 
 
+*******
+
+
+
+# GitHub
+
+### Multi-party work merge request acceptance via `pull` (from GitHub tips)
+```bat
+:: 1. Clone the repository or update your local repository with the latest changes.
+git pull origin main
+git pull
+:: 2. Switch to the base branch of the pull request.
+git checkout main
+:: 3. Merge the head branch into the base branch.
+git merge origin/<user>/<branch>
+:: 4. Push the changes.
+git push -u origin main
+git push
+```
+
+### Refer & auto-close an Issue
+```bash
+git commit -m "Fixed foo bar issue
+
+Closes #1
+"
+```
+> Supported keywords include:<br>
+> `close` `closes` `closed`
+> `fix` `fixes` `fixed`
+> `resolve` `resolves` `resolved`
