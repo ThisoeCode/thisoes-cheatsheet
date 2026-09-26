@@ -252,3 +252,33 @@ composer show -i
 ```bat
 composer remove vlucas/phpdotenv
 ```
+## Use Composer on the Server
+
+### Install Composer
+
+1. Download this file: https://getcomposer.org/installer and rename it to `composer-setup.php`
+
+2. Upload it onto the desired site's root dir.
+
+3. Open terminal and `cd` to the site root dir. Run verification:
+```bash
+php -r "if (hash_file('sha384', 'composer-setup.php') === 'c8b085408188070d5f52bcfe4ecfbee5f727afa458b2573b8eaaf77b3419b0bf2768dc67c86944da1544f06fa544fd47') { echo 'Installer verified'.PHP_EOL; } else { echo 'Installer corrupt'.PHP_EOL; unlink('composer-setup.php'); exit(1); }
+```
+
+4. If verified:
+```bash
+php -d allow_url_fopen=On composer-setup.php
+```
+
+5. Remove installer
+```bash
+php -r "unlink('composer-setup.php');"
+```
+
+### Install Packages
+1. Upload only `composer.json` and `composer.lock` to the server.
+
+2. Install packages:
+```bash
+php -d allow_url_fopen=On -d proc_open=On composer.phar install --no-dev --optimize-autoloader
+```
